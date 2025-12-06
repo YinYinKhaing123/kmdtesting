@@ -1,0 +1,41 @@
+.filter{
+    width:1200px;
+    margin: auto;
+    margin-top:3em;     /* 1em=11px*/
+}
+.buttons{
+    margin-bottom:2em;
+}
+.cards{
+    display: flex;
+    gap:1em;
+    flex-wrap:wrap;
+}
+.card{
+    width:380px;
+    padding:5em;
+}
+.shoe{
+    background-color:darkgreen;
+}
+.shirt{
+    background-color: cadetblue;
+}
+.pant{
+    background-color:coral;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline:none;
+    border:0;
+}
+body{
+    background-color: black;
+    color: white;
+}
+button{
+    padding:1em;
+    cursor: pointer;
+}

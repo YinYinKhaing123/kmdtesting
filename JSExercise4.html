@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Event Function</title></head>
+    <body>
+        <form method="get">
+            Enter First Number:
+            <input type="text" name="text1">
+            <p>
+                <input type="button" value="Show Message" onclick="showmessage(this.form)">
+            </p>
+        </form>
+        <script>
+            function showmessage(form){
+                var m=form.text1.value;
+                alert(m);
+            }
+        </script>
+    </body>
+</html>

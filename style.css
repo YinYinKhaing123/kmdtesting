@@ -1,0 +1,29 @@
+input[type=text],[type=number],[type=password]{
+    width:30%;
+    padding:10px;
+    margin:10px 0;
+    border:2px solid #666;
+    border-radius:4px;
+}
+input[type=text]:focus{
+    background-color:#333;
+    color:#fff;
+}
+input[type=number]:focus{
+    background-color: brown;
+    color:#fff;
+}
+input[type=password]:focus{
+    background-color:#aaa;
+    color:#fff;
+}
+input[type=button]{
+    width:100px;
+    height:40px;
+    background-color: #CCC;
+    color: #000;
+    font-weight: bold;
+    border-radius:10px;
+    cursor: pointer;
+
+}

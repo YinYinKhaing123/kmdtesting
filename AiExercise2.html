@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Question & Answer</title>
+</head>
+<style>
+        .container { 
+            width: 80%; 
+            margin: 30px auto; 
+            padding: 20px; 
+            background-color: white; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        } 
+        header h1 { 
+            margin: 0; 
+        } 
+        header { 
+            background-color: #00796b; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+            width: 100%; 
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f9f9f9; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        .search-bar { 
+            display: flex; 
+            justify-content: center; 
+            margin-bottom: 20px; 
+        }
+        button { 
+            padding: 15px; 
+            background-color: #00796b; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin:5px; 
+        }
+        button:hover { 
+            background-color: #004d40; 
+        } 
+        input{ 
+            width: 90%; 
+            padding: 10px; 
+            margin: 10px 0;             
+            font-size: 1rem; 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+        } 
+</style>
+<body>
+    <header>
+        <h1>AI Question & Answer</h1>
+        <p>Ask a question, get an AI-powered answer instantly.</p>
+    </header>
+    <div class="container">
+        <div class="search-bar"> 
+            <input type="text" id="questionInput" placeholder="Ask a question about AI..."> 
+            <button onclick="generateAnswer()">Ask AI</button> 
+        </div> 
+
+        <div id="qaSection"> 
+            <!-- <div class="qa-card"> answer</div> -->
+            <!-- answer -->
+        </div> 
+
+    </div>
+
+    <script> 
+        function generateAnswer() { 
+                    //how are you
+            const userQuestion = document.getElementById("questionInput").value; 
+            if (userQuestion.trim() === "") { 
+                alert("Please enter a question!"); 
+                return; 
+            } 
+            const answer = getAIAnswer(userQuestion); 
+            const qaSection = document.getElementById("qaSection"); 
+            const qaCard = document.createElement("div"); 
+            qaCard.className = "qa-card"; 
+            qaCard.innerHTML = `<h3>Question: ${userQuestion}</h3> 
+                                <p><strong>AI's Answer:</strong> ${answer}</p> 
+                                `; 
+            qaSection.appendChild(qaCard);    
+            document.getElementById("questionInput").value = ""; 
+    } 
+    function getAIAnswer(question) { 
+        const responses = { 
+            "What is AI?": "AI is the simulation.", 
+            "How does machine learning work?": "Machine learning algorithms.", 
+            "What is deep learning?": "Deep learning is a subset.", 
+            "Hello":"Hi There", 
+            "How are you?":"I'm Fine and you.",
+        };          
+        return responses[question] || "Sorry, I don't have an answer for that yet. But I am learning!"; 
+    } 
+ 
+</script> 
+    
+</body>
+
+</html>

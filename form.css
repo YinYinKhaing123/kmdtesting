@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+form{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+fieldset{
+    padding:30px;
+}
+legend{
+    text-align: center;
+    font-size:25px;
+}
+input,textarea{
+    margin-top:20px;
+    padding:10px;
+    outline: none;
+    font-size:15px;
+    border:1px solid red;
+}
+input:focus,
+textarea:focus{
+    border:1px solid darkseagreen;
+    background-color:darkseagreen;
+    color:#333;
+}
+input[type=radio]{
+    accent-color:darkseagreen;
+    width:15px;
+    height:15px;
+    color:pointer;
+}
+select{
+    padding:10px;
+    outline:none;
+    color: blue;
+}
+.button{
+    cursor:pointer;
+    width:100px;
+    margin-right:20px;
+}
+.button:hover{
+    background-color:darkseagreen;
+    color: white;
+    border: none;
+}

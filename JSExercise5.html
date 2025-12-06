@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Using Select Option</title></head>
+    <body id="bg">
+        <form>
+            <select name="color" onchange="changecolor(this.form)">
+                <option value="White">White</option> //0
+                <option value="Red">Red</option>  //1
+                <option value="Green">Green</option> //2
+                <option value="Blue">Blue</option> //3
+            </select>
+        </form>
+        <script>
+            function changecolor(form){
+                document.getElementById('bg').bgColor=form.color.options[form.color.selectedIndex].value;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Using Prompt with Condition</title></head>
+    <body>
+        <form>
+            Student Name:
+            <input type="text" name="studentname" id="studentname"/>
+            <input type="button" name="check" value="Display" onclick="chekingnull(document.getElementById('studentname').value)"/>
+        </form>
+        <script>
+            function chekingnull(name){
+                if(name){
+                    alert("Hello "+name);
+                }
+                else{
+                    alert("Please enter student name");
+                    document.getElementById('studentname').focus();
+                }
+            }
+        </script>
+
+    </body>
+</html>
